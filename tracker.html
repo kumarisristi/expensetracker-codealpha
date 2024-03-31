@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+     crossorigin="anonymous">
+     <script src="https://kit.fontawesome.com/4582c8b826.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="tracker.css">
+
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="jumbotron">
+
+            <h3 style="margin-bottom: 20px;" >Add New Issue:</h3>
+            <form id="issueinputform">
+                <div class="form-group">
+                    <label for="issueDescription" >Description</label>
+                    <input type="text" class="form-control" id="issueDescription" placeholder="Describe the issue ...">
+                </div>
+                <div class="form-group">
+                    <label for="issueSeverity">Severity</label>
+                    <select class="form-control" id="issueSeverity">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="issueAssignedTo">Assigned To</label>
+                    <input type="text" class="form-control" id="issueAssignedTo" placeholder="Enter responsible ...">
+                </div>
+                <button id="add-issue" onclick="submitIssue()" class="btn btn-primary" style="margin-top: 10px;">Add</button>
+            </form>
+        </div>
+        <div class="col-lg-12">
+            <div id="issuesList">
+            </div>
+        </div>
+    </div>
+
+
+
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="emptyField" tabindex="-1" role="dialog" aria-labelledby="emptyFieldLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="emptyFieldLabel">Invalid Input!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Please provide the desciption of the issue and also the person name who you want to assign the issue.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 
+    <div class="footer">
+      <p>coded by Kumari sristi</p>
+    </div> -->
+
+
+    <script src="tracker.js"></script> 
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
